@@ -1,0 +1,14 @@
+{
+  "name": "env-builder",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/michael34435/env-builder.git",
+  "author": "Michael.K <michael34435@capslock.tw>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.15.1"
+  },
+  "bin": {
+    "env-builder": "./bin/env-builder"
+  }
+}

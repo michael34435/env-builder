@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const commander = require('commander')
+const builder = require('..')
+const pkg = require('../package.json')
+const fs = require('fs')
+
+commander
+  .version(pkg.version)
+  .option('-f, --file [value]', `.env.example location (default: ${process.cwd()}/.env.example)`)
+  .option('-o, --output [value]', `Output .env location (default: ${process.cwd()}/.env)`)
+  .parse(process.argv)
+
+const {
+  file = `${process.cwd()}/.env.example`,
+  output = `${process.cwd()}/.env`
+} = commander
+
+if (fs.existsSync(file)) {
+  console.error(`Target: ${file}, is not exists`)
+  process.exit(1)
+}
+
+builder(file, output)
