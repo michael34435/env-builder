@@ -5,10 +5,17 @@
   "repository": "https://github.com/michael34435/env-builder.git",
   "author": "Michael.K <michael34435@capslock.tw>",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "commander": "^2.15.1"
   },
   "bin": {
     "env-builder": "./bin/env-builder"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "sinon": "^6.0.1"
   }
 }
