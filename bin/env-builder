@@ -9,11 +9,13 @@ commander
   .version(pkg.version)
   .option('-f, --file [value]', `.env.example location (default: ${process.cwd()}/.env.example)`)
   .option('-o, --output [value]', `Output .env location (default: ${process.cwd()}/.env)`)
+  .option('-e, --environment [value]', '.env suffix, you can assign different environments')
   .parse(process.argv)
 
 const {
   file = `${process.cwd()}/.env.example`,
-  output = `${process.cwd()}/.env`
+  output = `${process.cwd()}/.env`,
+  environment
 } = commander
 
 if (fs.existsSync(file)) {
@@ -21,4 +23,4 @@ if (fs.existsSync(file)) {
   process.exit(1)
 }
 
-builder(file, output)
+builder(file, [output, environment].filter(value => !!value).join('.'))
