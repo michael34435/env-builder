@@ -8,7 +8,7 @@ This tool help to to read environment variable to build `.env` file.
 npm link
 
 # install from npm
-npm install -g env-builder
+npm install -g env-builder-shell
 ```
 
 # Usage

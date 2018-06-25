@@ -1,5 +1,5 @@
 {
-  "name": ".env-builder",
+  "name": "env-builder-shell",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "https://github.com/michael34435/env-builder.git",
